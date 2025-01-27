@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    flex-direction: column; /* Stacks header, main, and footer vertically */
+}
+main {
+    flex: 1;
+    min-height: calc(100vh - 110px);
+}
+body {
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    background-color: grey;
+}
+/**********************************************************************************/
+
+
+/* Trapezoid Navbar */
+.landing-page{
+    justify-content: space-between;
+    background: #f40003;
+}
+/**********************************************************************************/
+
+
+/* Trapezoid Navbar */
+.navbar{
+    display: flex;
+    background: black;
+    justify-content: space-between;
+    color: white;
+    height: 5%;
+    padding: 10px;
+    align-items: center;
+    position: relative; /* Ensure it remains anchored */
+    width: 100%; /* Span full width of the viewport */
+    max-width: 100%; /* Prevent overflow */
+}
+.navbar-list{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: none;
+}
+.navbar-item{
+    margin: 0 15px;
+    font-size: 16px;
+}
+.navbar-link{
+    text-decoration: none;
+    color: white;
+}
+.logo{
+    display: flex;
+    align-items: center; /* Center align content vertically */
+    height: 50px;
+    width: 200px; /* Default width for large screens */
+    transition: all 0.3s ease; /* Smooth resizing transition */
+    background: none;
+}
+.logo img {
+    width: 100%; /* Scale the image to fit the container */
+    height: auto; /* Maintain aspect ratio */
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background: black;
+}
+.navbar ul li {
+    margin: 0 15px;
+    background: black;
+}
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+.navbar ul li a:hover {
+    text-decoration: underline;
+    color: #f40003;
+}
+.bx-menu {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    display: none; /* Hide the menu icon by default */
+}
+/* Default menu list styling */
+.menu-list {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    position: absolute;
+    top: 100%; /* Ensure it appears just below the navbar */
+    left: 0;
+    justify-content: space-around;
+    width: 100%; /* Fit the width of the navbar */
+    background-color: black;
+    z-index: 1000; /* Ensure it's on top of other content */
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional: Add some depth */
+}
+.menu-list li {
+    margin: 0; /* Remove horizontal margins */
+    text-align: center; /* Center align menu items */
+}
+/**********************************************************************************/
+
+
+/* Footer*/
+footer{
+    background: #000;
+    color: white;
+    text-align: center;
+    padding: 0rem;
+}
+.footer-space {
+    display: flex; /* Enable flexbox layout */
+    justify-content: space-between; /* Push children to opposite sides */
+    align-items: center; /* Vertically center the content */
+    padding: 10px 20px; /* Add some spacing */
+}
+
+.footer-copyright {
+    font-size: 14px;
+    align-content: center;
+    color: white; /* Adjust as needed */
+}
+
+.footer-icons i {
+    font-size: 20px; /* Icon size */
+    margin: 0 15px; /* Spacing between icons */
+    align-content: space-evenly;
+    color: white; /* Default icon color */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+.footer-icons i:hover {
+    color: #007bff; /* Change to your desired hover color */
+}
+
+/* Media*/
+/* Display the menu icon on smaller screens */
+@media (max-width: 768px) {
+    /* NAVBAR */
+    .menu-list {
+        display: none; /* Hidden by default on small screens */
+        flex-direction: column; /* Ensure vertical layout when visible */
+        position: absolute; /* Position it below the navbar */
+        top: 100%; /* Align dropdown below navbar */
+        left: 0;
+        background-color: black; /* Match navbar background */
+        width: 100%; /* Full width */
+        z-index: 1000; /* Ensure it’s on top */
+        padding: 10px 0; /* Add padding */
+    }
+
+    .menu-list li {
+        margin: 10px 0; /* Vertical spacing for menu items */
+        text-align: center; /* Center align menu items */
+    }
+
+    .bx-menu {
+        display: block; /* Show menu icon */
+        font-size: 24px; /* Size of the menu icon */
+        color: white;
+        cursor: pointer;
+    }
+
+    .logo {
+        width: 150px; /* Shrink logo for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 100px; /* Further shrink for very small screens */
+    }
+}

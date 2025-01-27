@@ -3,13 +3,23 @@
         <img src="img/main.avif" alt="Logo">
     </div>
     <div class="menu-list">
-        <ul class="navbar-list">
+        <ul class="sidebar">
+            <li onclick=hideSidebar() class="navbar-item"><a href="index.html" class="navbar-link"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"></path></svg></a></li>
             <li class="navbar-item"><a href="index.html" class="navbar-link">Home</a></li>
             <li class="navbar-item"><a href="about.html" class="navbar-link">About</a></li>
             <li class="navbar-item"><a href="services.html" class="navbar-link">Services</a></li>
             <li class="navbar-item"><a href="products.html" class="navbar-link">Products</a></li>
             <li class="navbar-item"><a href="portfolio.html" class="navbar-link">Portfolio</a></li>
             <li class="navbar-item"><a href="contact.html" class="navbar-link">Contact</a></li>
+        </ul>
+        <ul class="navbar-list">
+            <li class="navbar-item hideOnMobile"><a href="index.html" class="navbar-link">Home</a></li>
+            <li class="navbar-item hideOnMobile"><a href="about.html" class="navbar-link">About</a></li>
+            <li class="navbar-item hideOnMobile"><a href="services.html" class="navbar-link">Services</a></li>
+            <li class="navbar-item hideOnMobile"><a href="products.html" class="navbar-link">Products</a></li>
+            <li class="navbar-item hideOnMobile"><a href="portfolio.html" class="navbar-link">Portfolio</a></li>
+            <li class="navbar-item hideOnMobile"><a href="contact.html" class="navbar-link">Contact</a></li>
+            <li onclick=showSidebar() class="navbar-item menu-button-phone"><a href="#" class="navbar-link"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path></svg></a></li>
         </ul>
     </div>
     <i class='bx bx-menu' id="menu-icon"></i> <!-- Add an id to the menu icon -->
