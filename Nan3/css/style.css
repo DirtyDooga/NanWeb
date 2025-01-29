@@ -14,7 +14,13 @@ main{
     flex: 1;
     border: 5vh solid green;
 }
-
+.landing-page{
+    min-height: 80vh;
+    display: flex;
+    align-content: space-between;
+    border: 5vh solid red;
+    justify-content: center;
+}
 
 /* Navbar */
 .navbar{
